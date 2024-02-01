@@ -7,4 +7,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  get '/users/:id', to: 'users#show'
+
+  patch '/users/:id/activate', to: 'users#activate'
+
+  patch '/users/:id/deactivate', to: 'users#deactivate'
+
+  get '/posts', to: 'posts#index'
+
+  get '/posts/:id', to: 'posts#show'
+
+  post '/posts/:id', to: 'posts#create'
 end
